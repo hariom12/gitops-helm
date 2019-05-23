@@ -14,7 +14,7 @@ spec:
     path: charts/podinfo
     ref: master
   values:
-    image: hariom12/podinfo:dev-ueogpvyu
+    image: hariom12/podinfo:dev-fxgzdpqg
     replicaCount: 1
     hpa:
       enabled: false
