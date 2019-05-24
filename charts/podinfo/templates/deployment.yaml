@@ -2,9 +2,6 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}
-  annotations:
-    flux.weave.works/tag.chart-image: glob:dev-*
-    flux.weave.works/automated: 'true'
   labels:
     app: {{ template "podinfo.name" . }}
     chart: {{ template "podinfo.chart" . }}

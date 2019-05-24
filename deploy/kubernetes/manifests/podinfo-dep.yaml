@@ -1,20 +1,21 @@
----
-apiVersion: flux.weave.works/v1beta1
-kind: HelmRelease
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: podinfo-dev
-  namespace: dev
-  annotations:
-    flux.weave.works/tag.chart-image: glob:dev-*
-    flux.weave.works/automated: 'true'
+  name: nginx-deployment
+  labels:
+    app: nginx
 spec:
-  releaseName: podinfo-dev
-  chart:
-    git: git@github.com:hariom12/gitops-helm
-    path: charts/podinfo
-    ref: master
-  values:
-    image: hariom12/podinfo:dev-1.5.3
-    replicaCount: 1
-    hpa:
-      enabled: false
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
