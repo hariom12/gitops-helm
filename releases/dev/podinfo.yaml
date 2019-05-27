@@ -6,7 +6,6 @@ metadata:
   namespace: dev
   annotations:
     flux.weave.works/tag.chart-image: glob:dev-*
-    flux.weave.works/automated: 'true'
 spec:
   releaseName: podinfo-dev
   chart:
