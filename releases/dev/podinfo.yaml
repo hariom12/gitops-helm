@@ -14,7 +14,7 @@ spec:
     path: charts/podinfo
     ref: feature/weave-demo
   values:
-    image: hariom12/podinfo:dev-mqp1glm5
+    image: hariom12/podinfo:dev-1.5.4
     replicaCount: 1
     hpa:
       enabled: false
