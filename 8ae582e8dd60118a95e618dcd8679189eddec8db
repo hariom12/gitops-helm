@@ -1,0 +1,1 @@
+{"jobID":"7bb60f20-3fa3-a243-e59a-e6146013be6e","spec":{"type":"policy","cause":{"Message":"","User":"Hari Om \u003csprihaom1506@gmail.com\u003e"},"spec":{"dev:helmrelease/podinfo-dev":{"add":null,"remove":{"automated":"true"}}}},"result":null}
